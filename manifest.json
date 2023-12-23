@@ -1,0 +1,19 @@
+{
+  "description": "Extracts nxm links from nexusmods pages, allowing them to be easily copied and fed to a broker",
+  "manifest_version": 2,
+  "name": "nxm-revealer",
+  "version": "0.1.7",
+  "homepage_url": "https://dragovorn.com",
+  "icons": {
+    "48": "icons/extractor-48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "*://*.nexusmods.com/*/mods/*?tab=files" ],
+      "js": [ "background.js" ]
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ]
+}
